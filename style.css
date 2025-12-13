@@ -42,35 +42,27 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
-/* Intro panel */
-.intro {
+/* Intro + Methodology panels */
+.intro,
+.methodology {
   min-height: 80vh;
-  padding: 60px 10vw;
+  padding: 60px 12vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: #ffffff;
 }
 
+.methodology {
+  background: #FFFCF4;
+}
+
 /* Scrollytelling layout */
 .scrolly {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* MAP | TEXT */
   gap: 40px;
   padding: 40px 8vw;
-}
-
-/* Text column */
-.text {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
-
-/* Individual panels */
-.step {
-  min-height: 60vh;
-  padding: 20px;
 }
 
 /* Map column */
@@ -80,10 +72,23 @@ h1, h2 {
   height: 90vh;
 }
 
-/* Map itself */
+/* Text column */
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Panels */
+.step {
+  min-height: 60vh;
+  padding: 20px;
+}
+
+/* Map */
 #map {
   height: 100%;
   width: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
