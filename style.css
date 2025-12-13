@@ -44,4 +44,6 @@ h1, h2 {
 #map {
   height: 80vh;
   width: 100%;
+  background: #FFFCF4; 
 }
+
