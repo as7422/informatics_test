@@ -19,56 +19,61 @@
 
   <!-- INTRO PANEL -->
   <section class="intro">
-    <h1>Neighborhood Change in New York City (2010–2023)</h1>
+    <h1>Filtering the City</h1>
     <p>
       This project examines changes in socioeconomic conditions across
-      New York City Neighborhood Tabulation Areas (NTAs) using ACS 5-year data.
+      New York City Neighborhood Tabulation Areas (NTAs) using ACS 5-year data
+      from 2010 to 2023.
     </p>
-    <p>Scroll to explore the findings.</p>
+    <p>Scroll to continue.</p>
   </section>
 
-  <!-- SCROLLYTELLING CONTAINER -->
+  <!-- METHODOLOGY PANEL -->
+  <section class="methodology">
+    <h2>Methodology</h2>
+    <p>
+      ACS 5-year estimates from 2010 and 2023 were joined to NTA boundaries.
+      Change was calculated as the difference between time periods.
+    </p>
+    <p>
+      NTAs were selected as the unit of analysis to balance neighborhood
+      specificity and data stability.
+    </p>
+  </section>
+
+  <!-- SCROLLYTELLING SECTION (MAP APPEARS HERE) -->
   <div class="scrolly">
 
-    <!-- TEXT PANELS -->
-    <div class="text">
-      <section class="step" data-step="overview">
-        <h2>Citywide Overview</h2>
-        <p>
-          At the citywide scale, patterns of change reveal uneven growth
-          across neighborhoods.
-        </p>
-      </section>
-
-      <section class="step" data-step="methodology">
-        <h2>Methodology</h2>
-        <p>
-          ACS 5-year estimates from 2010 and 2023 were joined to NTA boundaries.
-          Change was calculated as the difference between time periods.
-        </p>
-      </section>
-
-      <section class="step" data-step="neighborhoods">
-        <h2>Neighborhood Focus</h2>
-        <p>
-          Three neighborhoods were selected to illustrate how citywide
-          trends manifest at the local level.
-        </p>
-      </section>
-    </div>
-
-    <!-- MAP -->
+    <!-- MAP (LEFT) -->
     <div class="map-container">
       <div id="map"></div>
     </div>
 
+    <!-- TEXT PANELS (RIGHT) -->
+    <div class="text">
+      <section class="step" data-step="overview">
+        <h2>Citywide Overview</h2>
+        <p>
+          Citywide patterns reveal uneven change across neighborhoods,
+          with growth concentrated in specific areas.
+        </p>
+      </section>
+
+      <section class="step" data-step="neighborhoods">
+        <h2>Neighborhood Case Studies</h2>
+        <p>
+          Three neighborhoods are examined to illustrate how citywide
+          trends manifest at the local scale.
+        </p>
+      </section>
+    </div>
+
   </div>
 
-  <!-- Leaflet JS -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-  <!-- Your map logic -->
   <script src="script.js"></script>
 
 </body>
+
 </html>
