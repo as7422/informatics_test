@@ -1,8 +1,6 @@
 const map = L.map('map').setView([40.7128, -74.0060], 11);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap'
-}).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 fetch('data/city_nta.geojson')
   .then(response => response.json())
