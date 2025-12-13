@@ -27,7 +27,7 @@ body {
 }
 
 .section:nth-child(2) {
-  background: #f4f4f4;
+  background: #FFFCF4;
 }
 
 .section:nth-child(3) {
@@ -42,8 +42,8 @@ h1, h2 {
   margin-bottom: 20px;
 }
 #map {
-  height: 80vh;
+  height: 95vh;
   width: 100%;
-  background: #FFFCF4; 
+  background: #F4F1E9; 
 }
 
