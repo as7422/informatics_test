@@ -9,7 +9,7 @@ fetch('data/city_nta.geojson')
   .then(data => {
     L.geoJSON(data, {
       onEachFeature: (feature, layer) => {
-        const name = feature.properties.NTAName || 'NTA';
+        const name = feature.properties.NTA2020 || 'NTA';
         layer.bindPopup(`<strong>${name}</strong>`);
       },
       style: {
