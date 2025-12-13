@@ -33,4 +33,7 @@ fetch('data/city_nta.geojson')
     // THIS is what removes the "world" view
     map.fitBounds(ntaLayer.getBounds());
     map.setMaxBounds(ntaLayer.getBounds());
+   setTimeout(() => {
+      map.invalidateSize();
+    }, 200);
   });
