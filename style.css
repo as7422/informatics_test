@@ -41,11 +41,7 @@ body {
 h1, h2 {
   margin-bottom: 20px;
 }
-#map {
-  height: 95vh;
-  width: 100%;
-  background: #F4F1E9; 
-}
+
 /* Intro panel */
 .intro {
   min-height: 80vh;
@@ -88,6 +84,6 @@ h1, h2 {
 #map {
   height: 100%;
   width: 100%;
-  background: #f2f2f2;
+  background: #F4F1E9;
 }
 
