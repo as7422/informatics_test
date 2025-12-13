@@ -5,7 +5,7 @@ function initMap() {
   if (mapInitialized) return;
   mapInitialized = true;
 
-  console.log("Initializing map");
+  console.log("🗺️ Initializing map");
 
   map = L.map('map', {
     zoomControl: false,
@@ -40,21 +40,18 @@ function initMap() {
       map.fitBounds(ntaLayer.getBounds());
       map.setMaxBounds(ntaLayer.getBounds());
 
-      // force correct sizing AFTER render
+      // Force correct sizing after render
       setTimeout(() => {
         map.invalidateSize();
       }, 300);
     });
 }
 
-// Wait until the scrollytelling section enters view
+// Initialize map ONLY when scrollytelling section enters view
 document.addEventListener("DOMContentLoaded", () => {
   const scrolly = document.querySelector(".scrolly");
 
-  if (!scrolly) {
-    console.error(".scrolly not found");
-    return;
-  }
+  if (!scrolly) return;
 
   const observer = new IntersectionObserver(
     entries => {
@@ -70,7 +67,8 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(scrolly);
 });
 
-// Handle window resize
+// Resize handling
 window.addEventListener("resize", () => {
   if (map) map.invalidateSize();
 });
+
