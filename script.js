@@ -1,3 +1,4 @@
+// Create the map
 const map = L.map('map', {
   zoomControl: false,
   dragging: false,
@@ -7,7 +8,7 @@ const map = L.map('map', {
   keyboard: false
 });
 
-
+// Load GeoJSON
 fetch('data/city_nta.geojson')
   .then(response => response.json())
   .then(data => {
@@ -30,12 +31,17 @@ fetch('data/city_nta.geojson')
       }
     }).addTo(map);
 
-    // THIS is what removes the "world" view
+    // Fit map to NYC and prevent panning away
     map.fitBounds(ntaLayer.getBounds());
     map.setMaxBounds(ntaLayer.getBounds());
-   setTimeout(() => {
+
+    // Force initial resize AFTER layout settles
+    setTimeout(() => {
       map.invalidateSize();
-    }, 200);
+    }, 300);
+  });
+
+// Handle browser resize (MUST be outside fetch)
 window.addEventListener('resize', () => {
   map.invalidateSize();
-  });
+});
