@@ -5,47 +5,14 @@
   font-family: Arial, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   line-height: 1.6;
 }
 
-.section {
-  height: 100vh;
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero {
-  background: #111;
-  color: white;
-}
-
-.section:nth-child(2) {
-  background: #FFFCF4;
-}
-
-.section:nth-child(3) {
-  background: #ddd;
-}
-
-.section:nth-child(4) {
-  background: #bbb;
-}
-
-h1, h2 {
-  margin-bottom: 20px;
-}
-
-/* Intro + Methodology panels */
+/* Intro & Methodology */
 .intro,
 .methodology {
-  min-height: 80vh;
+  min-height: 100vh;
   padding: 60px 12vw;
   display: flex;
   flex-direction: column;
@@ -62,33 +29,41 @@ h1, h2 {
   display: grid;
   grid-template-columns: 2fr 1fr; /* MAP | TEXT */
   gap: 40px;
-  padding: 40px 8vw;
+  padding: 40px 6vw;
+  align-items: start;
 }
 
 /* Map column */
 .map-container {
   position: sticky;
-  top: 20px;
-  height: 90vh;
+  top: 0;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+/* Map itself */
+#map {
+  height: 100vh;
+  width: 100%;
+  background: #f2f2f2;
 }
 
 /* Text column */
 .text {
   display: flex;
   flex-direction: column;
-  gap: 80px;
 }
 
-/* Panels */
+/* Full-screen panels */
 .step {
-  min-height: 60vh;
-  padding: 20px;
+  min-height: 100vh;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Map */
-#map {
-  height: 100%;
-  width: 100%;
-  background: #ffffff;
+/* Headings */
+h1, h2 {
+  margin-bottom: 20px;
 }
-
