@@ -20,4 +20,3 @@ fetch('data/city_nta.geojson')
       }
     }).addTo(map);
   });
-
