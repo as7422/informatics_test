@@ -46,4 +46,48 @@ h1, h2 {
   width: 100%;
   background: #F4F1E9; 
 }
+/* Intro panel */
+.intro {
+  min-height: 80vh;
+  padding: 60px 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+}
+
+/* Scrollytelling layout */
+.scrolly {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 8vw;
+}
+
+/* Text column */
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Individual panels */
+.step {
+  min-height: 60vh;
+  padding: 20px;
+}
+
+/* Map column */
+.map-container {
+  position: sticky;
+  top: 20px;
+  height: 90vh;
+}
+
+/* Map itself */
+#map {
+  height: 100%;
+  width: 100%;
+  background: #f2f2f2;
+}
 
