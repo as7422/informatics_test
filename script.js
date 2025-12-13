@@ -1,47 +1,76 @@
-// Create the map
-const map = L.map('map', {
-  zoomControl: false,
-  dragging: false,
-  scrollWheelZoom: false,
-  doubleClickZoom: false,
-  boxZoom: false,
-  keyboard: false
-});
+let map;
+let mapInitialized = false;
 
-// Load GeoJSON
-fetch('data/city_nta.geojson')
-  .then(response => response.json())
-  .then(data => {
+function initMap() {
+  if (mapInitialized) return;
+  mapInitialized = true;
 
-    const ntaLayer = L.geoJSON(data, {
-      onEachFeature: (feature, layer) => {
-        const name = feature.properties.NTAName || 'NTA';
-        const borough = feature.properties.BoroName || '';
+  console.log("Initializing map");
 
-        layer.bindPopup(`
-          <strong>${name}</strong><br/>
-          Borough: ${borough}
-        `);
-      },
-      style: {
-        fillColor: '#3182bd',
-        weight: 0.5,
-        color: '#333',
-        fillOpacity: 0.6
-      }
-    }).addTo(map);
-
-    // Fit map to NYC and prevent panning away
-    map.fitBounds(ntaLayer.getBounds());
-    map.setMaxBounds(ntaLayer.getBounds());
-
-    // Force initial resize AFTER layout settles
-    setTimeout(() => {
-      map.invalidateSize();
-    }, 300);
+  map = L.map('map', {
+    zoomControl: false,
+    dragging: false,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    boxZoom: false,
+    keyboard: false
   });
 
-// Handle browser resize (MUST be outside fetch)
-window.addEventListener('resize', () => {
-  map.invalidateSize();
+  fetch('data/city_nta.geojson')
+    .then(response => response.json())
+    .then(data => {
+
+      const ntaLayer = L.geoJSON(data, {
+        onEachFeature: (feature, layer) => {
+          const name = feature.properties.NTAName || 'NTA';
+          const borough = feature.properties.BoroName || '';
+
+          layer.bindPopup(
+            `<strong>${name}</strong><br/>Borough: ${borough}`
+          );
+        },
+        style: {
+          fillColor: '#3182bd',
+          weight: 0.5,
+          color: '#333',
+          fillOpacity: 0.6
+        }
+      }).addTo(map);
+
+      map.fitBounds(ntaLayer.getBounds());
+      map.setMaxBounds(ntaLayer.getBounds());
+
+      // force correct sizing AFTER render
+      setTimeout(() => {
+        map.invalidateSize();
+      }, 300);
+    });
+}
+
+// Wait until the scrollytelling section enters view
+document.addEventListener("DOMContentLoaded", () => {
+  const scrolly = document.querySelector(".scrolly");
+
+  if (!scrolly) {
+    console.error(".scrolly not found");
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          initMap();
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  observer.observe(scrolly);
+});
+
+// Handle window resize
+window.addEventListener("resize", () => {
+  if (map) map.invalidateSize();
 });
