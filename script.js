@@ -1,10 +1,18 @@
-const map = L.map('map').setView([40.7128, -74.0060], 11);
+const map = L.map('map', {
+  zoomControl: false,
+  dragging: false,
+  scrollWheelZoom: false,
+  doubleClickZoom: false,
+  boxZoom: false,
+  keyboard: false
+});
 
 
 fetch('data/city_nta.geojson')
   .then(response => response.json())
   .then(data => {
-    L.geoJSON(data, {
+
+    const ntaLayer = L.geoJSON(data, {
       onEachFeature: (feature, layer) => {
         const name = feature.properties.NTAName || 'NTA';
         const borough = feature.properties.BoroName || '';
@@ -21,4 +29,8 @@ fetch('data/city_nta.geojson')
         fillOpacity: 0.6
       }
     }).addTo(map);
+
+    // THIS is what removes the "world" view
+    map.fitBounds(ntaLayer.getBounds());
+    map.setMaxBounds(ntaLayer.getBounds());
   });
