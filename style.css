@@ -60,7 +60,7 @@ h1, h2 {
 /* Scrollytelling layout */
 .scrolly {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* MAP | TEXT */
+  grid-template-columns: 2fr 1fr; /* MAP | TEXT */
   gap: 40px;
   padding: 40px 8vw;
 }
