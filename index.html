@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>filtering the city</title>
+  <title>Filtering the City</title>
 
   <!-- Leaflet CSS -->
   <link
@@ -11,28 +11,11 @@
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
 
-  <style>
-    /* give the map a height */
-    #map {
-      height: 95vh;
-      width: 100%;
-    }
-  </style>
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-
-  <h1>basemap</h1>
-
-  
-  <div id="map"></div>
-
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-  
-  <script src="script.js"></script>
-</body>
-  <body>
 
   <!-- INTRO PANEL -->
   <section class="intro">
@@ -81,6 +64,11 @@
 
   </div>
 
-</body>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+  <!-- Your map logic -->
+  <script src="script.js"></script>
+
+</body>
 </html>
