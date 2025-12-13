@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+.section {
+  height: 100vh;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero {
+  background: #111;
+  color: white;
+}
+
+.section:nth-child(2) {
+  background: #f4f4f4;
+}
+
+.section:nth-child(3) {
+  background: #ddd;
+}
+
+.section:nth-child(4) {
+  background: #bbb;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
