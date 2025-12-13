@@ -20,7 +20,4 @@ fetch('data/city_nta.geojson')
       }
     }).addTo(map);
   });
-#map {
-  height: 80vh;
-  width: 100%;
-}
+
