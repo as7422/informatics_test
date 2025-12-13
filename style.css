@@ -41,3 +41,7 @@ body {
 h1, h2 {
   margin-bottom: 20px;
 }
+#map {
+  height: 80vh;
+  width: 100%;
+}
