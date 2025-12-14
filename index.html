@@ -3,77 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Filtering the City</title>
+  <title>filtering the city</title>
 
-  <!-- Leaflet CSS -->
+  <!-- leaflet css -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
 
-  <!-- Your stylesheet -->
+  <!-- site css -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- INTRO PANEL -->
-  <section class="intro">
-    <h1>Filtering the City</h1>
-    <p>
-      This project examines changes in socioeconomic conditions across
-      New York City Neighborhood Tabulation Areas (NTAs) using ACS 5-year data
-      from 2010 to 2023.
-    </p>
-    <p>Scroll to continue.</p>
+  <!-- panel 1: introduction -->
+  <section class="panel" style="background:#ffffff;">
+    <h1>filtering the city</h1>
+    <h3>investigating relationships between digital platforms and neighborhood change in nyc</h3>
+    <p class="prompt">scroll to continue</p>
   </section>
 
-  <!-- METHODOLOGY PANEL -->
-  <section class="methodology">
-    <h2>Methodology</h2>
+  <!-- panel 2: background -->
+  <section class="panel">
+    <h2>digital platforms & the city</h2>
+    <p>digital platforms are increasingly contributing to everyday urban experiences</p>
+    <p>social media is altering how society and the built environment are perceived</p>
     <p>
-      ACS 5-year estimates from 2010 and 2023 were joined to NTA boundaries.
-      Change was calculated as the difference between time periods.
-    </p>
-    <p>
-      NTAs were selected as the unit of analysis to balance neighborhood
-      specificity and data stability.
+      tiktok in particular positions videos that fit certain narratives and visual identities
+      to go viral easily, altering how people engage with the city
     </p>
   </section>
 
-  <!-- SCROLLYTELLING SECTION (MAP APPEARS HERE) -->
+  <!-- panel 3: background continued -->
+  <section class="panel">
+    <p>
+      digital platforms traditionally provide services like food delivery, navigation,
+      ride-hailing, short-term rentals…
+    </p>
+    <p>
+      these platforms produce social relations, symbolic hierarchies, modes of visibility,
+      and ways of inhabiting a place. user-led content driven platforms employ locational
+      user data in the form of reviews, images, and descriptions as method for commodifying
+      urban place and transforming the fabric of city life
+    </p>
+    <p>
+      through these elements, they are contributing to the increasing digitization and
+      mediatization of the city. this constructs the symbolic economy of place, which refers
+      to the production of space and symbols through culture
+    </p>
+  </section>
+
+  <!-- panel 4: platform gentrification -->
+  <section class="panel">
+    <h2>platform gentrification</h2>
+    <h3>reconfiguring traditional forms of gentrification</h3>
+    <p>
+      from the construction of the symbolic economy of place, certain neighborhoods can
+      become objects of desire in online spaces through videos, images, or posts that are
+      circulated and reproduced online. defining and increasing (or decreasing) the
+      desirability of a place online can change the value of a location, providing a means
+      of increasing gentrification of a certain location.
+    </p>
+    <p>
+      this process is being understood as platform gentrification, which suggests that
+      digital landscapes are producing spatial inequalities in the city, and are potentially
+      incentivizing changes to investments in different locations.
+    </p>
+  </section>
+
+  <!-- panel 5: research questions -->
+  <section class="panel">
+    <h2>research questions</h2>
+    <ul>
+      <li>which neighborhoods are being impacted by platform gentrification?</li>
+      <li>how do digital platforms shape the symbolic economy of place in nyc neighborhoods?</li>
+    </ul>
+  </section>
+
+  <!-- panel 6: methodology part 1 -->
+  <section class="panel">
+    <h2>methodology</h2>
+    <p>
+      using the 5-year acs data for 2023 and 2010, ntas were evaluated for the following
+      parameters to determine which neighborhoods are changing the most (determining
+      neighborhood hotspots)
+    </p>
+    <ul>
+      <li># of rent occupied units (2010 5 year average)</li>
+      <li># of rent occupied units (2023 5 year average)</li>
+      <li>median gross rent (2010 5 year average)</li>
+      <li>median gross rent (2023 5 year average)</li>
+      <li>median household income (2010 5 year average)</li>
+      <li>median household income (2023 5 year average)</li>
+      <li>educational attainment (bachelor's degree or higher) (2010 5 year average)</li>
+      <li>educational attainment (bachelor's degree or higher) (2023 5 year average)</li>
+      <li>foreign born population (2010 5 year average)</li>
+      <li>foreign born population (2023 5 year average)</li>
+      <li>bivariate map showing black and hispanic population (2010 5 year average)</li>
+      <li>bivariate map showing black and hispanic population (2023 5 year average)</li>
+      <li>2023 basemap overlaid with mandatory inclusionary housing zones and properties</li>
+    </ul>
+  </section>
+
+  <!-- scrollytelling section: map appears here -->
   <div class="scrolly">
 
-    <!-- MAP (LEFT) -->
+    <!-- map (left) -->
     <div class="map-container">
       <div id="map"></div>
     </div>
 
-    <!-- TEXT PANELS (RIGHT) -->
+    <!-- text (right) -->
     <div class="text">
-      <section class="step" data-step="overview">
-        <h2>Citywide Overview</h2>
-        <p>
-          Citywide patterns reveal uneven change across neighborhoods,
-          with growth concentrated in specific areas.
+
+      <!-- panel 7: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/mhhi_2010.png" alt="map">
+        <p class="map-caption">
+          median household income by nta in 2010 using acs 5-year estimates
+        </p>
+      </section>
+      
+      <!-- panel 8: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/mhhi_2023.png" alt="map">
+        <p class="map-caption">
+          median household income by nta in 2023 using acs 5-year estimates
+        </p>
+      </section>
+      
+       <!-- panel 9: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/rent_occupied_units_2010.png" alt="map">
+        <p class="map-caption">
+          # of rent occupied units by nta in 2010 using acs 5-year estimates
+        </p>
+      </section>
+      
+      <!-- panel 10: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/rou_2023.png" alt="map">
+        <p class="map-caption">
+          # of rent occupied units by nta in 2023 using acs 5-year estimates
         </p>
       </section>
 
-      <section class="step" data-step="neighborhoods">
-        <h2>Neighborhood Case Studies</h2>
-        <p>
-          Three neighborhoods are examined to illustrate how citywide
-          trends manifest at the local scale.
+       <!-- panel 11: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/mgr_2010.png" alt="map">
+        <p class="map-caption">
+          median gross rent (dollars) by nta in 2010 using acs 5-year estimates
         </p>
       </section>
+
+      <!-- panel 12: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/mgr_2023.png" alt="map">
+        <p class="map-caption">
+          median gross rent (dollars) by nta in 2023 using acs 5-year estimates
+        </p>
+      </section>
+
+      <!-- panel 13: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/fb_2010.png" alt="map">
+        <p class="map-caption">
+          population of foreign born residents by nta in 2010 using acs 5-year estimates
+        </p>
+      </section>
+
+      <!-- panel 14: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/fb_2023.png" alt="map">
+        <p class="map-caption">
+          population of foreign born residents by nta in 2023 using acs 5-year estimates
+        </p>
+      </section>
+
+      <!-- panel 15: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/ea_2010.png" alt="map">
+        <p class="map-caption">
+          educational attainment (bachelor's degree or higher) by nta in 2010 using acs 5-year estimates
+        </p>
+      </section>
+
+      <!-- panel 16: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/ea_2023.png" alt="map">
+        <p class="map-caption">
+          educational attainment (bachelor's degree or higher) by nta in 2023 using acs 5-year estimates
+        </p>
+      </section>
+
+       <!-- panel 17: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/bivariate_2010.png" alt="map">
+        <p class="map-caption">
+          bivariate map showing black and hispanic populations by nta in 2010 using acs 5-year estimates
+        </p>
+      </section>
+      
+      <!-- panel 18: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/bivariate_2023.png" alt="map">
+        <p class="map-caption">
+          bivariate map showing black and hispanic populations by nta in 2023 using acs 5-year estimates
+        </p>
+      </section>
+      
+      <!-- panel 19: maps -->
+      <section class="panel map-panel">
+        <img src="data_maps/mih_ih.png" alt="map">
+        <p class="map-caption">
+          mandatory inclusionary housing zones and inclusionary housing properties across NYC
+        </p>
+      </section>
+     
+      <!-- panel 20: methodology part 2 -->
+      <section class="panel">
+        <h2>methodology</h2>
+        <p>
+          from the map analysis, the three neighborhoods that stand out as areas changing are
+        </p>
+        <ul>
+          <li>east village/lower east side</li>
+          <li>greenpoint/williamsburg</li>
+          <li>astoria</li>
+        </ul>
+      </section>
+
     </div>
-
   </div>
 
-  <!-- Scripts -->
+  <!-- scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="script.js"></script>
 
 </body>
-
 </html>
