@@ -17,14 +17,13 @@
 
 <body>
 
-  <!-- panel 1: introduction -->
-  <section class="panel" style="background:#ffffff;">
+  <!-- PANELS 1–6 (NO MAP YET) -->
+  <section class="panel active">
     <h1>filtering the city</h1>
     <h3>investigating relationships between digital platforms and neighborhood change in nyc</h3>
     <p class="prompt">scroll to continue</p>
   </section>
 
-  <!-- panel 2: background -->
   <section class="panel">
     <h2>digital platforms & the city</h2>
     <p>digital platforms are increasingly contributing to everyday urban experiences</p>
@@ -35,7 +34,6 @@
     </p>
   </section>
 
-  <!-- panel 3: background continued -->
   <section class="panel">
     <p>
       digital platforms traditionally provide services like food delivery, navigation,
@@ -43,193 +41,82 @@
     </p>
     <p>
       these platforms produce social relations, symbolic hierarchies, modes of visibility,
-      and ways of inhabiting a place. user-led content driven platforms employ locational
-      user data in the form of reviews, images, and descriptions as method for commodifying
-      urban place and transforming the fabric of city life
+      and ways of inhabiting a place.
     </p>
     <p>
       through these elements, they are contributing to the increasing digitization and
-      mediatization of the city. this constructs the symbolic economy of place, which refers
-      to the production of space and symbols through culture
+      mediatization of the city.
     </p>
   </section>
 
-  <!-- panel 4: platform gentrification -->
   <section class="panel">
     <h2>platform gentrification</h2>
     <h3>reconfiguring traditional forms of gentrification</h3>
     <p>
-      from the construction of the symbolic economy of place, certain neighborhoods can
-      become objects of desire in online spaces through videos, images, or posts that are
-      circulated and reproduced online. defining and increasing (or decreasing) the
-      desirability of a place online can change the value of a location, providing a means
-      of increasing gentrification of a certain location.
+      defining and increasing desirability of a place online can change the value of a location,
+      providing a means of increasing gentrification.
     </p>
     <p>
-      this process is being understood as platform gentrification, which suggests that
-      digital landscapes are producing spatial inequalities in the city, and are potentially
-      incentivizing changes to investments in different locations.
+      this process is being understood as platform gentrification.
     </p>
   </section>
 
-  <!-- panel 5: research questions -->
   <section class="panel">
     <h2>research questions</h2>
     <ul>
       <li>which neighborhoods are being impacted by platform gentrification?</li>
-      <li>how do digital platforms shape the symbolic economy of place in nyc neighborhoods?</li>
+      <li>how do digital platforms shape the symbolic economy of place?</li>
     </ul>
   </section>
 
-  <!-- panel 6: methodology part 1 -->
   <section class="panel">
     <h2>methodology</h2>
     <p>
-      using the 5-year acs data for 2023 and 2010, ntas were evaluated for the following
-      parameters to determine which neighborhoods are changing the most (determining
-      neighborhood hotspots)
+      acs 5-year estimates from 2010 and 2023 were joined to nta boundaries to identify
+      neighborhoods experiencing the most change.
     </p>
-    <ul>
-      <li># of rent occupied units (2010 5 year average)</li>
-      <li># of rent occupied units (2023 5 year average)</li>
-      <li>median gross rent (2010 5 year average)</li>
-      <li>median gross rent (2023 5 year average)</li>
-      <li>median household income (2010 5 year average)</li>
-      <li>median household income (2023 5 year average)</li>
-      <li>educational attainment (bachelor's degree or higher) (2010 5 year average)</li>
-      <li>educational attainment (bachelor's degree or higher) (2023 5 year average)</li>
-      <li>foreign born population (2010 5 year average)</li>
-      <li>foreign born population (2023 5 year average)</li>
-      <li>bivariate map showing black and hispanic population (2010 5 year average)</li>
-      <li>bivariate map showing black and hispanic population (2023 5 year average)</li>
-      <li>2023 basemap overlaid with mandatory inclusionary housing zones and properties</li>
-    </ul>
   </section>
 
-  <!-- scrollytelling section: map appears here -->
+  <!-- SCROLLYTELLING SECTION (MAP FIXED HERE) -->
   <div class="scrolly">
 
-    <!-- map (left) -->
+    <!-- FIXED MAP -->
     <div class="map-container">
       <div id="map"></div>
     </div>
 
-    <!-- text (right) -->
-    <div class="text">
+    <!-- TEXT SLIDES -->
+    <div class="slides">
 
-      <!-- panel 7: maps -->
       <section class="panel map-panel">
-        <img src="data_maps/mhhi_2010.png" alt="map">
         <p class="map-caption">
           median household income by nta in 2010 using acs 5-year estimates
         </p>
       </section>
-      
-      <!-- panel 8: maps -->
+
       <section class="panel map-panel">
-        <img src="data_maps/mhhi_2023.png" alt="map">
         <p class="map-caption">
           median household income by nta in 2023 using acs 5-year estimates
         </p>
       </section>
-      
-       <!-- panel 9: maps -->
+
       <section class="panel map-panel">
-        <img src="data_maps/rent_occupied_units_2010.png" alt="map">
         <p class="map-caption">
-          # of rent occupied units by nta in 2010 using acs 5-year estimates
-        </p>
-      </section>
-      
-      <!-- panel 10: maps -->
-      <section class="panel map-panel">
-        <img src="data_maps/rou_2023.png" alt="map">
-        <p class="map-caption">
-          # of rent occupied units by nta in 2023 using acs 5-year estimates
+          median gross rent by nta in 2010 using acs 5-year estimates
         </p>
       </section>
 
-       <!-- panel 11: maps -->
       <section class="panel map-panel">
-        <img src="data_maps/mgr_2010.png" alt="map">
         <p class="map-caption">
-          median gross rent (dollars) by nta in 2010 using acs 5-year estimates
+          median gross rent by nta in 2023 using acs 5-year estimates
         </p>
       </section>
 
-      <!-- panel 12: maps -->
-      <section class="panel map-panel">
-        <img src="data_maps/mgr_2023.png" alt="map">
-        <p class="map-caption">
-          median gross rent (dollars) by nta in 2023 using acs 5-year estimates
-        </p>
-      </section>
-
-      <!-- panel 13: maps -->
-      <section class="panel map-panel">
-        <img src="data_maps/fb_2010.png" alt="map">
-        <p class="map-caption">
-          population of foreign born residents by nta in 2010 using acs 5-year estimates
-        </p>
-      </section>
-
-      <!-- panel 14: maps -->
-      <section class="panel map-panel">
-        <img src="data_maps/fb_2023.png" alt="map">
-        <p class="map-caption">
-          population of foreign born residents by nta in 2023 using acs 5-year estimates
-        </p>
-      </section>
-
-      <!-- panel 15: maps -->
-      <section class="panel map-panel">
-        <img src="data_maps/ea_2010.png" alt="map">
-        <p class="map-caption">
-          educational attainment (bachelor's degree or higher) by nta in 2010 using acs 5-year estimates
-        </p>
-      </section>
-
-      <!-- panel 16: maps -->
-      <section class="panel map-panel">
-        <img src="data_maps/ea_2023.png" alt="map">
-        <p class="map-caption">
-          educational attainment (bachelor's degree or higher) by nta in 2023 using acs 5-year estimates
-        </p>
-      </section>
-
-       <!-- panel 17: maps -->
-      <section class="panel map-panel">
-        <img src="data_maps/bivariate_2010.png" alt="map">
-        <p class="map-caption">
-          bivariate map showing black and hispanic populations by nta in 2010 using acs 5-year estimates
-        </p>
-      </section>
-      
-      <!-- panel 18: maps -->
-      <section class="panel map-panel">
-        <img src="data_maps/bivariate_2023.png" alt="map">
-        <p class="map-caption">
-          bivariate map showing black and hispanic populations by nta in 2023 using acs 5-year estimates
-        </p>
-      </section>
-      
-      <!-- panel 19: maps -->
-      <section class="panel map-panel">
-        <img src="data_maps/mih_ih.png" alt="map">
-        <p class="map-caption">
-          mandatory inclusionary housing zones and inclusionary housing properties across NYC
-        </p>
-      </section>
-     
-      <!-- panel 20: methodology part 2 -->
       <section class="panel">
-        <h2>methodology</h2>
-        <p>
-          from the map analysis, the three neighborhoods that stand out as areas changing are
-        </p>
+        <h2>neighborhood focus</h2>
         <ul>
-          <li>east village/lower east side</li>
-          <li>greenpoint/williamsburg</li>
+          <li>east village / lower east side</li>
+          <li>greenpoint / williamsburg</li>
           <li>astoria</li>
         </ul>
       </section>
