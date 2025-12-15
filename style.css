@@ -98,11 +98,13 @@ body {
 .full-map .map-caption {
   position: absolute;
   bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 80vw;
+  right: 40px; 
+  left: auto;
+  transform: none;
+  max-width: 420px;
   font-size: 0.85rem;
   opacity: 0.75;
+  text-align: right;
 }
 
 /* TEXT */
