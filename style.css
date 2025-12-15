@@ -15,8 +15,10 @@ body {
 
 /* PANELS */
 .panel {
-  min-height: 100vh;
+  height: 100vh;
   padding: 80px 12vw;
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,11 +30,11 @@ body {
 }
 
 .panel-muted {
-  background: #E3EAEF; 
+  background: #DAE6F2; 
 }
 
 .panel-credits {
-  background: #E7E7E7;
+  background: #F4F1E9;
 }
 
 .panel-center {
