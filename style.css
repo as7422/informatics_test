@@ -32,6 +32,16 @@ body {
 .panel-muted {
   background: #FAE1E5; 
 }
+.panel-muted h1,
+.panel-muted h2,
+.panel-muted h3 {
+  color: #6E6E6E;
+}
+
+.panel-muted p,
+.panel-muted li {
+  color: #4E4E4E;
+}
 
 .panel-credits {
   background: #FFFCF4;
