@@ -46,7 +46,15 @@ body {
 .panel-credits {
   background: #FFFCF4;
 }
-
+.panel-credits h1,
+.panel-credits h2,
+.panel-credits h3 {
+  color: #6E6E6E;
+}
+.panel-credits p,
+.panel-credits li {
+  color: #4E4E4E;
+}
 .panel-center {
   align-items: center;
   text-align: center;
