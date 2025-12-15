@@ -28,7 +28,11 @@ body {
 }
 
 .panel-muted {
-  background: #E7E7E7; 
+  background: #FFFCF4; 
+}
+
+.panel-credits {
+  background: #E7E7E7;
 }
 
 .panel-center {
@@ -77,6 +81,28 @@ body {
 .map-caption {
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* FULL-SCREEN MAP PANELS */
+.full-map {
+  padding: 0;
+}
+
+.full-map img {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  object-fit: contain;
+}
+
+.full-map .map-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 80vw;
+  font-size: 0.85rem;
+  opacity: 0.75;
 }
 
 /* TEXT */
