@@ -11,14 +11,14 @@
 <body>
 
   <!-- panel 1: introduction -->
-  <section class="panel active">
+  <section class="panel active panel-center">
     <h1>filtering the city</h1>
     <h3>investigating relationships between digital platforms and neighborhood change in nyc</h3>
     <p class="prompt">scroll to continue</p>
   </section>
 
   <!-- panel 2: background -->
-  <section class="panel">
+  <section class="panel panel-muted">
     <h2>digital platforms & the city</h2>
     <p>digital platforms are increasingly contributing to everyday urban experiences
     
@@ -81,30 +81,34 @@
     </ul>
   </section>
 
-  <!-- panel 6: methodology part 1 -->
-  <section class="panel">
-    <h2>methodology</h2>
-    <p>
-      using the 5-year acs data for 2023 and 2010, ntas were evaluated for the following
-      parameters to determine which neighborhoods are changing the most (determining
-      neighborhood hotspots)
-    </p>
-    <ul>
-      <li># of rent occupied units (2010 5 year average)</li>
-      <li># of rent occupied units (2023 5 year average)</li>
-      <li>median gross rent (2010 5 year average)</li>
-      <li>median gross rent (2023 5 year average)</li>
-      <li>median household income (2010 5 year average)</li>
-      <li>median household income (2023 5 year average)</li>
-      <li>educational attainment (bachelor's degree or higher) (2010 5 year average)</li>
-      <li>educational attainment (bachelor's degree or higher) (2023 5 year average)</li>
-      <li>foreign born population (2010 5 year average)</li>
-      <li>foreign born population (2023 5 year average)</li>
-      <li>bivariate map showing black and hispanic population (2010 5 year average)</li>
-      <li>bivariate map showing black and hispanic population (2023 5 year average)</li>
-      <li>2023 basemap overlaid with mandatory inclusionary housing zones and properties</li>
-    </ul>
-  </section>
+ <!-- panel 6: methodology part 1 -->
+<section class="panel">
+  <h2>step 1: identify neighborhood hotspots</h2>
+  <h3>methodology</h3>
+
+  <p class="panel-lead">
+    using the 5-year acs data for 2023 and 2010, ntas were evaluated for the following
+    parameters to determine which neighborhoods are changing the most (determining
+    neighborhood hotspots)
+  </p>
+
+  <ul>
+    <li># of rent occupied units (2010 5 year average)</li>
+    <li># of rent occupied units (2023 5 year average)</li>
+    <li>median gross rent (2010 5 year average)</li>
+    <li>median gross rent (2023 5 year average)</li>
+    <li>median household income (2010 5 year average)</li>
+    <li>median household income (2023 5 year average)</li>
+    <li>educational attainment (bachelor's degree or higher) (2010 5 year average)</li>
+    <li>educational attainment (bachelor's degree or higher) (2023 5 year average)</li>
+    <li>foreign born population (2010 5 year average)</li>
+    <li>foreign born population (2023 5 year average)</li>
+    <li>bivariate map showing black and hispanic population (2010 5 year average)</li>
+    <li>bivariate map showing black and hispanic population (2023 5 year average)</li>
+    <li>2023 basemap overlaid with mandatory inclusionary housing zones and properties</li>
+  </ul>
+</section>
+
 
   <!-- panel 7 -->
   <section class="panel map-panel">
@@ -223,6 +227,86 @@
     </ul>
   </section>
 
+  <!-- panel 21: hotspot map -->
+<section class="panel map-panel">
+  <img src="data_maps/TL_hotspots.png" alt="hotspot map">
+  <p class="map-caption">
+    nta-level hotspot map identifying neighborhoods experiencing the greatest magnitude of change across selected socioeconomic indicators
+  </p>
+</section>
+
+  <!-- panel 22: methodology part 2 -->
+<section class="panel">
+  <h2>step 2: exploratory analysis of impactful businesses in hotspot neighborhoods</h2>
+  <h3>methodology</h3>
+
+  <p class="panel-lead">
+    tiktok videos were gathered based on the following search parameters:
+  </p>
+
+  <ul>
+    <li>'neighborhood name' + 'viral'</li>
+    <li>'neighborhood name' + 'food'</li>
+    <li>'neighborhood name' + 'coffee'</li>
+  </ul>
+
+  <p class="panel-lead">
+    these videos were used to select businesses based on the following criteria:
+  </p>
+
+  <ul>
+    <li>at least 10,000 likes OR</li>
+    <li>at least 100,000 views</li>
+  </ul>
+
+  <p class="panel-lead">
+    these terms were used in order to determine which businesses receive the most visibility online,
+    which businesses could potentially be receiving the greatest impact from tiktok, and which
+    businesses are creating the most impact on the surrounding neighborhood character
+  </p>
+</section>
+
+  <!-- panel 23: east village -->
+<section class="panel map-panel">
+  <img src="data_maps/ev_businesses.png" alt="east village map">
+  <p class="map-caption">
+    east village neighborhood map highlighting the most frequently mentioned businesses in tiktok content
+  </p>
+</section>
+
+  <!-- panel 24: williamsburg -->
+<section class="panel map-panel">
+  <img src="data_maps/wb_businesses.png" alt="williamsburg map">
+  <p class="map-caption">
+    williamsburg neighborhood map highlighting the most frequently mentioned businesses in tiktok content
+  </p>
+</section>
+
+  <!-- panel 25: astoria -->
+<section class="panel map-panel">
+  <img src="data_maps/as_businesses.png" alt="astoria map">
+  <p class="map-caption">
+    astoria neighborhood map highlighting the most frequently mentioned businesses in tiktok content
+  </p>
+</section>
+
+ <!-- panel 26: conclusions -->
+<section class="panel">
+  <h2>conclusions</h2>
+  <p>
+    ultimately, these results will be used to conduct further analysis on how digital platforms
+    influence overarching patterns of platform gentrification
+  </p>
+</section>
+
+  <!-- final panel: credits -->
+<section class="panel panel-muted panel-center">
+  <h2>informatics final deliverable</h2>
+  <p>ayanna sharma</p>
+  <p>plana6619</p>
+</section>
+
+  
   <script src="script.js"></script>
 </body>
 </html>
